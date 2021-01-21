@@ -2,7 +2,7 @@
 Técnicas de Deep learning tem sido amplamente usada para resolver problemas de visão computacional. Entretanto, para obter um modelo ideal de Deeep learning para uma aplicação, precisamo conciliar acurácia e performance, principalmente para análise de video em tempo real. A yolo é uma arquitetura de redes neurais convolucionais desenvolvida com propósito de entregar boa performance. Por esse motivo escolhemos treinar uma rede yolov3-tiny parar detecção de máscara. 
 
 # Motivação
-No senário atual, com Covid-19, é obrigatório o uso de mascaras. Essa medida é fundamental para evitar a transmissão em massa do vírus. Nesse sentido, ferramenta de visão computacional pode ser usada para monitoramento principalmente em locais públicos com muita circulação de pessoas.
+No cenário atual, com Covid-19, é obrigatório o uso de mascaras. Essa medida é fundamental para evitar a transmissão em massa do vírus. Nesse sentido, ferramenta de visão computacional pode ser usada para monitoramento principalmente em locais públicos com muita circulação de pessoas.
 
 # Demo
 
