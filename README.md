@@ -12,8 +12,9 @@
 | game | [game](./game) |
 | capa invisível | [capa](./invisibility) |
 | detector de máscara | [detect_mask](./detect_mask) |
-| reconhecimento facial | [face_recognition](./face_recognition)
-| QT +OpenCV video | [integration](./pyqt5_opencv)
+| reconhecimento facial | [face_recognition](./face_recognition) |
+| QT + OpenCV video | [integration](./pyqt5_opencv) |
+| Dino chrome | [jogo dino](./google_dinossauro)
 ---
 
 Baixe meu ebook grátis Guia de visão computacional. [Baixar](https://eltonfernando904.wixsite.com/meusite)
