@@ -5,7 +5,7 @@ File: yolov3_video_mask.py
 import numpy as np
 import cv2
 import time
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture("video02.mp4")
 writer = None
 h, w = None, None
 
@@ -19,14 +19,15 @@ layers_names_all = net.getLayerNames()
 layers_names_output = \
     [layers_names_all[i[0] - 1] for i in net.getUnconnectedOutLayers()]
 
-probability_minimum = 0.4
+probability_minimum = 0.3
 threshold = 0.3
 colours = np.array([[255,0,0],[0,0,255]])
-
+tempo_execucao=0
+counter=0
 while cap.isOpened():
 
     ret, frame = cap.read()
-
+    frame=frame[:,:1080]
     if not ret:
         break
     if w is None or h is None:
@@ -75,17 +76,21 @@ while cap.isOpened():
             box_width, box_height = bounding_boxes[i][2], bounding_boxes[i][3]
 
             colour_box_current = colours[class_numbers[i]].tolist()
-
+            frame[y_min:y_min+box_height+10,x_min:x_min+box_width+10]=cv2.blur(frame[y_min:y_min+box_height+10,x_min:x_min+box_width+10],(21,21))
             cv2.rectangle(frame, (x_min, y_min),
                           (x_min + box_width+10, y_min + box_height+10),
                           colour_box_current, 2)
 
-            text_box_current = '{}: {:.4f}'.format(CLASSES[int(class_numbers[i])],
+            text_box_current = '{}: {:.2f}'.format(CLASSES[int(class_numbers[i])],
                                                    confidences[i])
-
-            cv2.putText(frame, text_box_current+" FPS "+str(round(1/(end-start))), (x_min, y_min-2),
+            FPS=round(1/(end-start))
+            cv2.putText(frame, text_box_current, (x_min, y_min-4),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.8, colour_box_current, 2)
-
+            cv2.putText(frame,"tempo: "+str(tempo_execucao)+" s",(x_min, y_min+box_height+32),cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0,0,255), 2)
+    if counter >14:
+        counter=0
+        tempo_execucao+=1
+    counter+=1
     cv2.imshow("frame",frame)
     k = cv2.waitKey(1)
     if k == ord("q"):
