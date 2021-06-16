@@ -1,6 +1,6 @@
 ## Reconhecimento facial
 
-Para cadastrar um face basta colocar uma image na pasta base.
+Para cadastrar um face veja o arquivo data_face.py .
 * O nome da pessoa é o nome da imagem
 * A imagem deve conter apenas o rosto que será cadastrado
 * Não pode existir nem um arquivo nessa pasta que não seja uma imagem
