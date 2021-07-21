@@ -17,7 +17,7 @@
 | Dino chrome | [jogo dino](./google_dinossauro)
 ---
 
-Baixe meu ebook grátis Guia de visão computacional. [Baixar](https://eltonfernando904.wixsite.com/meusite)
+Baixe meu ebook grátis Guia de visão computacional. [Baixar](http://visioncompy.com/)
 
 ---
 
@@ -27,5 +27,5 @@ Engenheiro eletricista pela universidade estadual do estado do mato grosso.
 
 * Graduação em Engenharia elétrica pela UNEMAT.
 * Mestrando em reprodução animal UFMT.
-* Autor do blog visioncompy, onde compartilho um pouco da minha esperiência em visão computacional.
+* Autor do blog [visioncompy](http://visioncompy.com/), onde compartilho um pouco da minha esperiência em visão computacional.
 
