@@ -4,7 +4,7 @@ para cadastrar uma nova face na base seja o arquivo data_face.py
 import cv2
 from process import CriaFaceRecongnition
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 
 process_this_frame = True # pula um frame
 
@@ -15,14 +15,14 @@ while cap.isOpened():
     if not ret:
         raise NameError("frame invalido")
 
-    small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
+    small_frame = cv2.resize(frame, (0, 0), fx=0.5, fy=0.5)
     rgb_small_frame =cv2.cvtColor(small_frame,cv2.COLOR_BGR2RGB)
     if process_this_frame:
         face.detection(rgb_small_frame)
         face.compare()
-    print(face.face_names)
+    #print(face.face_names)
 
-    face.draw(frame,resized=0.25)
+    face.draw(frame,resized=0.5)
 
     process_this_frame = not process_this_frame
     cv2.imshow('Video', frame)

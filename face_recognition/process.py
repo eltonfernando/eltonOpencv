@@ -32,8 +32,10 @@ class CriaFaceRecongnition():
             return
         for face_encod in self.face_encodings:
             matches = face_recognition.compare_faces(self.data_face_encodings, face_encod)
+
             name = "????"
             best_match_index=self._confidencie(face_encod)
+            #print(best_match_index)
 
             if matches[best_match_index]:
                 name = self.data_face_names[best_match_index]
@@ -46,7 +48,12 @@ class CriaFaceRecongnition():
         :return: indixe da face com menor distância
         """
         face_distances = face_recognition.face_distance(self.data_face_encodings, face_encod)
+        print(face_distances)
         best_match_index = np.argmin(face_distances)
+        valor=face_distances[best_match_index]
+        if valor>0.5:
+            return 0
+
         return best_match_index
 
     def draw(self,frame,resized):
