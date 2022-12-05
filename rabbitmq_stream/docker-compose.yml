@@ -1,0 +1,16 @@
+version: "3"
+services:
+  rabbtimq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    restart: unless-stopped
+    command:
+      - rabbitmq-plugins enable rabbitmq_stream
+    ports:
+      - 5672:5672
+      - 80:15672
+    volumes:
+      - ./rabbimqbackup:/var/lib/rabbitmq
+#    environment:
+#      - RABBITMQ_DEFAUT_USER=admin
+#      - RABBITMQ_DEFAUT_PASS=123456

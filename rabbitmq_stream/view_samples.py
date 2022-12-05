@@ -5,7 +5,7 @@ from core import Consumer
 
 class VideoView():
     def __init__(self):
-        self.consumer = Consumer(queue="frame")
+        self.consumer = Consumer("frame")
         self.consumer.start(on_message=self.on_message)
 
     @staticmethod
@@ -14,8 +14,7 @@ class VideoView():
        # print(chan)
        # print(method_frame)
 
-        body=np.frombuffer(body, np.uint8)
-
+        body = np.frombuffer(body, np.uint8)
         img = cv2.imdecode(body,cv2.IMREAD_COLOR)
         cv2.imshow(method_frame.routing_key,img)
         cv2.waitKey(1)

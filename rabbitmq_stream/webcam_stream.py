@@ -18,11 +18,13 @@ class VideoCap():
             sleep(1/25)
 
 
+
+
 if __name__ == "__main__":
 
     vs = VideoCap()
-    vs.queue.set_routing_key("video")
-    vs.start("/media/elton/D/engdb/video/por-embraer/Angulo_6_video_1_validacao.mp4")
+    vs.queue.set_routing_key("wbecam")
+    vs.start(0)
 
 
 
