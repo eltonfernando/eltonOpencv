@@ -1,0 +1,10 @@
+DEBUG:__main__:Sending CONNECT (u0, p0, wr0, wq0, wf0, c1, k60) client_id=b''
+DEBUG:__main__:Received CONNACK (0, 0)
+DEBUG:__main__:Sending SUBSCRIBE (d0, m1) [(b'eltonbot/#', 0)]
+DEBUG:__main__:Received SUBACK
+DEBUG:__main__:Received PUBLISH (d0, q0, r0, m0), 'eltonbot/bela_vista/cam01', ...  (2 bytes)
+DEBUG:__main__:Received PUBLISH (d0, q0, r0, m0), 'eltonbot/bela_vista/cam01', ...  (2 bytes)
+DEBUG:__main__:Received PUBLISH (d0, q0, r0, m0), 'eltonbot/bela_vista/cam01', ...  (2 bytes)
+DEBUG:__main__:Received PUBLISH (d0, q0, r0, m0), 'eltonbot/bela_vista/cam01', ...  (2 bytes)
+DEBUG:__main__:Received PUBLISH (d0, q0, r0, m0), 'eltonbot/bela_vista/cam01', ...  (2 bytes)
+DEBUG:__main__:Received PUBLISH (d0, q0, r0, m0), 'eltonbot/bela_vista/cam01', ...  (2 bytes)
