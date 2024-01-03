@@ -12,7 +12,7 @@ import cv2
 
 
 class SaveVideo:
-    def __init__(self, fps=30, out_name="saida") -> None:
+    def __init__(self, fps=30, out_name="saida.mp4") -> None:
         self.log = getLogger(__name__)
         self.fps = fps
         self.out_name = out_name
